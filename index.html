@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>SI buttons</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+    
+        var audio  = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/click.mp3');
+      
+        $(".horn").mousedown(function() {
+          audio.load();
+          audio.play();
+        });
+      });</script>
+</head>
+<body>
+    <ul class="navigation">
+        <li>
+            <a href="https://www.behance.net/minik" class="color_button first" target="_blank"><div class="links_item_content">1</div></a>
+        </li>
+        <li>
+            <a href="https://dribbble.com/minik" class="color_button second" target="_blank"><div class="links_item_content">2</div></a>
+        </li>
+        <li>
+            <a href="http://instagram.com/minikenty" class="color_button third" target="_blank"><div class="links_item_content">3</div></a>
+        </li>
+        <li>
+            <a href="http://instagram.com/minikenty" class="color_button fourth" target="_blank"><div class="links_item_content">4</div></a>
+        </li>
+    </ul>
+    <section class="content" style="border-color: var(--color-first);">
+        <div class="horn" style="background-color: var(--color-first);"></div>
+    </section>
+</body>
+</html>

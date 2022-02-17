@@ -1,0 +1,94 @@
+:root {
+    --color-first: #5800FF;
+    --color-second: #E900FF;
+    --color-third: #FFC600;
+    --color-fourth: #4BF4C1;
+    --color-dark: #1d1d1d;
+}
+
+body {
+    box-sizing: border-box;
+    background: var(--color-dark);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Press Start 2P', cursive;
+  }
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navigation li {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.color_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    color: var(--color-dark);
+    border-width: 0;
+    box-shadow: inset 0px 8px 0px -4px rgba(255, 255, 255, 0.24);
+}
+
+.first {
+    background-color: var(--color-first);
+}
+
+.second {
+    background-color: var(--color-second);
+}
+
+.third {
+    background-color: var(--color-third);
+}
+
+.fourth {
+    background-color: var(--color-fourth);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-width: 1rem;
+    border-style: solid;
+    padding: 8%;
+}
+
+.horn {
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    background-image: url("../img/icon_horn.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.horn:active {
+    opacity: 0.8;
+    transition: 0.2s;
+    transform: translateY(3px);
+}
