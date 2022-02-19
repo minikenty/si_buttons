@@ -7,41 +7,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/ico" sizes="16x16" href="favicon/favicon.ico">
     <title>SI buttons</title>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <!--
+    <!-- Tab Script -->
     <script>
-        $(document).ready(function() {
-    
-        var audio  = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/click.mp3');
-      
-        $(".horn").mousedown(function() {
-          audio.load();
-          audio.play();
-        });
-      });</script>
-    -->
+        jQuery(document).ready(function() {
+	jQuery('.tabs .tab_group a').on('click', function(e) {
+		var currentAttrValue = jQuery(this).attr('href');
+
+		// Show/Hide Tabs
+		jQuery(currentAttrValue).show().siblings().hide();
+
+		// Change/remove current tab to active
+		jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+		e.preventDefault();
+	});
+});
+    </script>
 </head>
 <body>
-    <ul class="navigation">
-        <li>
-            <a href="https://www.behance.net/minik" class="color_button first" target="_blank"><div class="links_item_content">1</div></a>
-        </li>
-        <li>
-            <a href="https://dribbble.com/minik" class="color_button second" target="_blank"><div class="links_item_content">2</div></a>
-        </li>
-        <li>
-            <a href="http://instagram.com/minikenty" class="color_button third" target="_blank"><div class="links_item_content">3</div></a>
-        </li>
-        <li>
-            <a href="http://instagram.com/minikenty" class="color_button fourth" target="_blank"><div class="links_item_content">4</div></a>
-        </li>
-    </ul>
+    <div class="tabs">
+        <ul class="tab_group">
+            <li class="active">
+                <a href="#tab1" class="first">1</a>
+            </li>
+            <li>
+                <a href="#tab2" class="second">2</a>
+            </li>
+            <li>
+                <a href="#tab3" class="third">3</a>
+            </li>
+            <li>
+                <a href="#tab4" class="fourth">4</a>
+            </li>
+        </ul>
+    </div>
     <audio id="sound1" src="audio/police-whistle.wav" preload="auto"></audio>
-    <section class="content" style="border-color: var(--color-first);">
-        <button onclick="document.getElementById('sound1').play();" class="horn" style="background-color: var(--color-first);"></button>
-    </section>
+    <div class="tab_content">
+        <div id="tab1" class="tab active" style="border-color: var(--color-first);">
+            <div onclick="document.getElementById('sound1').play();" class="horn" style="background-color: var(--color-first);"></div>
+        </div>
+
+        <div id="tab2" class="tab" style="border-color: var(--color-second);">
+            <div onclick="document.getElementById('sound1').play();" class="horn" style="background-color: var(--color-second);"></div>
+        </div>
+
+        <div id="tab3" class="tab" style="border-color: var(--color-third);">
+            <div onclick="document.getElementById('sound1').play();" class="horn" style="background-color: var(--color-third);"></div>
+        </div>
+
+        <div id="tab4" class="tab" style="border-color: var(--color-fourth);">
+            <div onclick="document.getElementById('sound1').play();" class="horn" style="background-color: var(--color-fourth);"></div>
+        </div>
+    </div>
 </body>
 </html>
