@@ -86,7 +86,7 @@ li.active a, li.active a:hover {
     box-sizing: border-box;
     border-width: 1rem;
     border-style: solid;
-    padding: 8%;
+    padding: 4%;
 }
 
 .tab.active {
