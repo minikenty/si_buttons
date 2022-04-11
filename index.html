@@ -33,6 +33,7 @@
     </script>
 </head>
 <body>
+    <!-- Tab section -->
     <div class="tabs">
         <ul class="tab_group">
             <li class="active">
@@ -49,22 +50,29 @@
             </li>
         </ul>
     </div>
-    <audio id="sound1" src="audio/police-whistle.wav" preload="auto"></audio>
+
+    <!-- Audio section -->
+    <audio id="sound1" src="audio/bike-horn.mp3" preload="auto"></audio>
+    <audio id="sound2" src="audio/rooster.mp3" preload="auto"></audio>
+    <audio id="sound3" src="audio/tutturuu.mp3" preload="auto"></audio>
+    <audio id="sound4" src="audio/timmy.mp3" preload="auto"></audio>
+
+    <!-- Button section -->
     <div class="tab_content">
         <div id="tab1" class="tab active" style="border-color: var(--color-first);">
             <div onclick="document.getElementById('sound1').play();" class="horn" style="background-color: var(--color-first);"></div>
         </div>
 
         <div id="tab2" class="tab" style="border-color: var(--color-second);">
-            <div onclick="document.getElementById('sound1').play();" class="horn" style="background-color: var(--color-second);"></div>
+            <div onclick="document.getElementById('sound2').play();" class="horn" style="background-color: var(--color-second);"></div>
         </div>
 
         <div id="tab3" class="tab" style="border-color: var(--color-third);">
-            <div onclick="document.getElementById('sound1').play();" class="horn" style="background-color: var(--color-third);"></div>
+            <div onclick="document.getElementById('sound3').play();" class="horn" style="background-color: var(--color-third);"></div>
         </div>
 
         <div id="tab4" class="tab" style="border-color: var(--color-fourth);">
-            <div onclick="document.getElementById('sound1').play();" class="horn" style="background-color: var(--color-fourth);"></div>
+            <div onclick="document.getElementById('sound4').play();" class="horn" style="background-color: var(--color-fourth);"></div>
         </div>
     </div>
 </body>
